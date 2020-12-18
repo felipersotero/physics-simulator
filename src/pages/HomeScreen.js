@@ -3,21 +3,24 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import { Card, ActivityIndicator } from "react-native-paper";
+
 import Constants from "expo-constants";
 
 import Header from "../components/Header";
+import Lists from '../components/Lists';
 
 export default function HomeScreen( {navigation} ) {
     return (
       <View style={styles.container}>
         <Header title={"Simulador"} />
         <View style={styles.content}>
-          <Text>Home Screen</Text>
+          {/* <Text>Home Screen</Text>
           <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Detail')}>
               <Text>Mudar tela</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <Lists />
         </View>
-        
       </View>
     );
   }
@@ -29,8 +32,7 @@ export default function HomeScreen( {navigation} ) {
       paddingTop: Constants.statusBarHeight
     },
     content: {
-      flex: 9,
-      alignItems: 'center',
+      flex: 6,
       paddingTop: 10
 
     },
