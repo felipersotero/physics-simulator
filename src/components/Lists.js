@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { List } from 'react-native-paper';
 
-export default function Lists() {
+export default function Lists( props ) {
     return(
     <List.AccordionGroup>
-        <View>
+        <ScrollView>
         <List.Accordion title={<Text style={styles.topicsText}>Cinemática</Text>} id="1" style={styles.topics}>
             <View style={styles.content}>
-                <List.Item title="Item 1" />
+                <List.Item title="Item 1" onPress={props.click} />
                 <List.Item title="Item 1" />
                 <List.Item title="Item 1" />
             </View>
@@ -41,7 +41,56 @@ export default function Lists() {
                 <List.Item title="Item 1" />
             </View>
         </List.Accordion>
-        </View>
+        <List.Accordion title={<Text style={styles.topicsText}>Termodinâmica</Text>} id="6" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        <List.Accordion title={<Text style={styles.topicsText}>Óptica</Text>} id="7" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        <List.Accordion title={<Text style={styles.topicsText}>Ondulatória</Text>} id="8" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        <List.Accordion title={<Text style={styles.topicsText}>Eletrostática</Text>} id="9" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        <List.Accordion title={<Text style={styles.topicsText}>Eletrodinâmica</Text>} id="10" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        <List.Accordion title={<Text style={styles.topicsText}>Eletromagnetismo</Text>} id="11" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        <List.Accordion title={<Text style={styles.topicsText}>Física Moderna</Text>} id="12" style={styles.topics}>
+            <View style={styles.content}>
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+                <List.Item title="Item 1" />
+            </View>
+        </List.Accordion>
+        </ScrollView>
     </List.AccordionGroup>
     );
 }

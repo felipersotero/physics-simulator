@@ -19,7 +19,7 @@ export default function HomeScreen( {navigation} ) {
           <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Detail')}>
               <Text>Mudar tela</Text>
           </TouchableOpacity> */}
-          <Lists />
+          <Lists click={()=>navigation.navigate('Detail')} />
         </View>
       </View>
     );
@@ -33,8 +33,7 @@ export default function HomeScreen( {navigation} ) {
     },
     content: {
       flex: 6,
-      paddingTop: 10
-
+      paddingBottom: 5,
     },
     button: {
         height: 40,

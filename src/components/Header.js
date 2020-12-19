@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#5271FF',
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        borderBottomColor: '#3f5ae0',
+        borderBottomWidth: 3,
     },
     buttonArea:{
         flex: 1,
